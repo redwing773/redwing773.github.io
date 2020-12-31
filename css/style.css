@@ -1373,7 +1373,7 @@ pre .javascript .function {
   display: inline-block;
 }
 .article-entry.popol .bold{font-weight:700;}
-.article-entry.popol .imgbox{text-align:center;}
+.article-entry.popol .imgbox{padding-top:10px;text-align:center;}
 .article-entry.popol .imgbox img{display:inline-block;}
 .article-entry.popol .list{word-break:keep-all;word-wrap:break-word;}
 .article-entry.popol .list dt{margin-top:30px;}
