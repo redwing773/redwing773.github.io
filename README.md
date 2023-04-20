@@ -34,3 +34,6 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+### static 배포
+> dist폴더의 산출물을 git에 직접 등
