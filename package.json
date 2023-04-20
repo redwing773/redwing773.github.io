@@ -8,14 +8,17 @@
   },
   "author": "채지민",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "dev-pub": "sass --style=compressed --watch src/main/webapp/resources/css/portalPage/scss:src/main/webapp/resources/css/portalPage | webpack-dev-server --config webpack.pub.config.js ",
+    "serve": "sass --style=compressed --watch public/css/scss:public/css/ | vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "vue": "^2.6.14"
+    "vue": "^2.7.14",
+    "vuex": "^3.6.2",
+    "axios": "^1.3.4",
+    "vue-router": "^3.5.3",
+    "chart.js": "^4.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
