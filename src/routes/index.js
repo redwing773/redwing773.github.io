@@ -5,6 +5,7 @@ import AskView from '../views/AskView.vue'
 import JobsView from '../views/JobsView.vue'
 import UserView from '../views/UserView.vue';
 import ItemView from '../views/ItemView.vue';
+import ChartView from '../views/ChartView.vue';
 // import createListView from '../views/CreateListView.js';
 import bus from '../utils/bus.js';
 import { store } from '../store/index.js';
@@ -66,6 +67,18 @@ export const router = new VueRouter({
         {
             path: '/item/:id',
             component : ItemView,
+        },
+        {
+            path: '/chart',
+            name: 'chart',
+            // component: createListView('JobsView')
+            component: ChartView,
+            beforeEnter: (to, from, next) => {
+                bus.$emit('start:spinner');
+                store.dispatch('FETCH_LIST', to.name)
+                .then(() => next())
+                .catch((error) => { console.log(error) })
+            }
         },
     ]
 }) 

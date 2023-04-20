@@ -36,4 +36,4 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### static 배포
-> dist폴더의 산출물을 git에 직접 등
+> dist폴더의 산출물을 git에 직접 업로드, dist/index.html의 링크된 src들을 "/"에서 "./"로 바꿔줘야 함

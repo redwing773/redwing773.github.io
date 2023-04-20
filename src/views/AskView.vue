@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- <tool-bar></tool-bar> -->
     <list-item></list-item>
   </div>
 </template>
@@ -10,7 +11,8 @@ import ListMixin from '../mixins/ListMixin.js';
 
 export default {
   components: {
-    ListItem
+    ListItem,
+    // ToolBar
   },
   mixins: [ListMixin],
 }
