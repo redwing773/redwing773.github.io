@@ -1,11 +1,6 @@
 <template>
     <div>
-        <tool-bar></tool-bar>
-        <transition name="page">
-            <!-- url이 만약 news면 : <news-vies></news-views> 로 변경되서 실행 -->
-            <router-view></router-view>
-        </transition>
-        <spinner :loading="loadingStatus"></spinner>
+        <!-- <spinner :loading="loadingStatus"></spinner> -->
         <!-- <button @click="loginUser1">login</button>
           <ul>`
             <li v-for="item in items">{{ item }}</li>
@@ -16,23 +11,22 @@
 </template>
 
 <script>
-import ToolBar from '../components/ToolBar.vue';
-import Spinner from '../components/Spinner.vue';
-import bus from '../utils/bus.js';
+// import bus from '../utils/bus.js';
 // import axios from 'axios';
 // import { handleException } from './utils/handler.js';
 import BarChart from '../components/BarChart.vue';
 import LineChart from '../components/LineChart.vue';
+import ListMixin from '../mixins/ListMixin.js';
+
 export default {
     components: {
-        ToolBar,
-        Spinner,
+        // Spinner,
         BarChart,
         LineChart,
     },
     data() {
         return {
-            loadingStatus: false,
+            // loadingStatus: false,
             items: [],
             chartDataSet: [
                 {
@@ -44,12 +38,12 @@ export default {
     },
 
     methods: {
-        startSpinner() {
-            this.loadingStatus = true;
-        },
-        endSpinner() {
-            this.loadingStatus = false;
-        },
+        // startSpinner() {
+        //     this.loadingStatus = true;
+        // },
+        // endSpinner() {
+        //     this.loadingStatus = false;
+        // },
         refreshChart() {
             console.log('emit received');
             this.chartDataSet = [
@@ -97,16 +91,16 @@ export default {
         // },
     },
 
-    created() {
-        bus.$on('start:spinner', this.startSpinner);
-        bus.$on('end:spinner', this.endSpinner);
-        console.log(process.env.VUE_APP_TITLE);
-    },
+    // created() {
+    //     bus.$on('start:spinner', this.startSpinner);
+    //     bus.$on('end:spinner', this.endSpinner);
+    // },
 
-    beforeDestroy() {
-        bus.$off('start:spinner', this.startSpinner);
-        bus.$off('end:spinner', this.endSpinner);
-    },
+    // beforeDestroy() {
+    //     bus.$off('start:spinner', this.startSpinner);
+    //     bus.$off('end:spinner', this.endSpinner);
+    // },
+    mixins: [ListMixin],
 }
 </script>
 
