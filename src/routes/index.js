@@ -6,6 +6,7 @@ import JobsView from '../views/JobsView.vue'
 import UserView from '../views/UserView.vue';
 import ItemView from '../views/ItemView.vue';
 import ChartView from '../views/ChartView.vue';
+import PortfolioView from '../views/PortfolioView.vue';
 // import createListView from '../views/CreateListView.js';
 import bus from '../utils/bus.js';
 import { store } from '../store/index.js';
@@ -19,7 +20,9 @@ export const router = new VueRouter({
     routes: [
         {
             path: '/',
+            name: 'portfolio',
             // redirect: '/news',
+            component: PortfolioView,
         },
         {
             // path : url 주소

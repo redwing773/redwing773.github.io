@@ -1,24 +1,23 @@
 <template>
   <div id="app">
-    <portfolio-view></portfolio-view>
+    <spinner :loading="loadingStatus"></spinner>
+    <tool-bar v-if="$route.name !== 'portfolio'"></tool-bar>
+    <transition name="page">
+      <router-view></router-view>
+    </transition>
   </div>
 </template>
+
 <script>
-import ToolBar from './components/ToolBar.vue';
+import ToolBar from './components/ToolBar.vue'
 import Spinner from './components/Spinner.vue';
 import bus from './utils/bus.js';
 // import axios from 'axios';
 // import { handleException } from './utils/handler.js';
-import BarChart from './components/BarChart.vue';
-import LineChart from './components/LineChart.vue';
-import PortfolioView from './views/PortfolioView.vue';
 export default {
   components: {
     ToolBar,
     Spinner,
-    BarChart,
-    LineChart,
-    PortfolioView,
   },
   data() {
     return {
@@ -90,7 +89,6 @@ export default {
   created() {
     bus.$on('start:spinner', this.startSpinner);
     bus.$on('end:spinner', this.endSpinner);
-    console.log(process.env.VUE_APP_TITLE);
   },
 
   beforeDestroy() {

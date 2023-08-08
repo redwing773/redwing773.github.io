@@ -1,12 +1,12 @@
 <template>
-  <div id="container">
+  <div id="container" ref="container">
     <div id="wrap">
       <header id="header">
         <div id="banner"></div>
         <div id="header-outer" class="outer">
           <div id="header-title" class="inner">
             <h1 id="logo-wrap">
-              <a href="/" id="logo" style="padding:0 20px;font-weight:400;text-shadow: 0 0 1px #000;">웹퍼블리셔 채지민 입니다</a>
+              <a href="/" id="logo" style="padding:0 20px;font-weight:400;text-shadow: 0 0 1px #000;">프론트엔드 개발자 채지민 입니다</a>
             </h1>
           </div>
           <div id="header-inner" class="inner">
@@ -43,41 +43,56 @@
                 <h1 itemprop="name" class="article-title">
                   작업 중.. Vue.JS 프레임워크로 된 사이트로 수정 예정
                 </h1>
+                <router-link :key="$route.fullPath" :to="`/news`">News API페이지로 이동</router-link>
               </header>
               <div class="article-entry popol" itemprop="articleBody">
-                <a style="display:block;margin:20px 0;text-align:right;" href="" target="_blank">이력서 다운로드</a>
+                <!-- <a style="display:block;margin:20px 0;text-align:right;" href="" target="_blank">이력서 다운로드</a> -->
                 <div class="imgbox">
-                  <img src="/legacy/images/html5.png" alt="">
-                  <img src="/legacy/images/css3.png" alt="">
-                  <img src="/legacy/images/js.png" alt="">
+                  <img src="/images/html5.png" alt="">
+                  <img src="/images/css3.png" alt="">
+                  <img src="/images/js.png" alt="">
+                  <img src="/images/vue.png" width="200" alt="">
+
                 </div>
                 <div class="list">
                   <h1 itemprop="name" class="article-title">
-                    포트폴리오
+                    <!-- 포트폴리오 -->
                   </h1>
                   <dl>
-                    <dt>포스코 SteelTrade 철강 e-MarketPlace 구축</dt>
-                    <dd>포스코 주문 외 제품의 온라인 판매와 철강 비즈니스의 상생의 생태계를 위한 철강 오픈마켓 서비스 구축</dd>
-                    <dd>역할 : ADMIN 페이지, 제품 상세 페이지, 메인페이지 작업 지원</dd>
-                    <dd><span class="bold">Client</span> : 포스코 인터내셔널 / Launching	2019<br>
-                      URL	: <a href="https://www.steeltrade.co.kr" target="_blank">www.steeltrade.co.kr</a>
-                      <img src="/legacy/images/포스코_e-Market_place_01_Divice_pcMo-1.jpg" alt="">
-                    </dd>
-                    <dt>롯데 충전형 복지카드 시스템 구축</dt>
-                    <dd>롯데카드의 충전식 선불 복지카드 전용 홈페이지 구축</dd>
-                    <dd>역할 : 메인,상세 등 전반적인 페이지 작업</dd>
-                    <dd><span class="bold">Client</span> : 롯데카드 / Launching	2019<br>
-                      URL : <a href="https://ccpc.lottecard.co.kr" target="_blank">https://ccpc.lottecard.co.kr</a>
-                        <img src="/legacy/images/롯데_충전형복지카드_01_Divice_pc.jpg" alt="">
-                    </dd>
                     <dt>DB손해보험 시스템 운영</dt>
                     <dd>DB손해보험의 전체 웹페이지 유지보수</dd>
                     <dd>역할 : 대고객 대표 홈페이지, 다이렉트 대표 홈페이지, 내부 시스템, 챗봇, DM등 DB의 모든 페이지 관리</dd>
                     <dd><span class="bold">Client</span> : DB손해보험<br>
                       대고객 대표 홈페이지 URL : <a href="https://www.idbins.com" target="_blank">https://www.idbins.com</a>
-                        <img src="/legacy/images/동부화재.jpg" alt="" style="margin-bottom:20px">
+                        <img src="/images/동부화재.jpg" alt="" style="margin-bottom:20px">
                       다이렉트 대표 홈페이지 URL : <a href="https://www.directdb.co.kr" target="_blank">https://www.directdb.co.kr</a>
-                      <img src="/legacy/images/동부화재다이렉트.jpg" alt="">
+                      <img src="/images/동부화재다이렉트.jpg" alt="">
+                    </dd>
+
+                    <dt>DB손해보험 시스템 운영</dt>
+                    <dd>DB손해보험의 전체 웹페이지 유지보수</dd>
+                    <dd>역할 : 대고객 대표 홈페이지, 다이렉트 대표 홈페이지, 내부 시스템, 챗봇, DM등 DB의 모든 페이지 관리</dd>
+                    <dd><span class="bold">Client</span> : DB손해보험<br>
+                      대고객 대표 홈페이지 URL : <a href="https://www.idbins.com" target="_blank">https://www.idbins.com</a>
+                        <img src="/images/동부화재.jpg" alt="" style="margin-bottom:20px">
+                      다이렉트 대표 홈페이지 URL : <a href="https://www.directdb.co.kr" target="_blank">https://www.directdb.co.kr</a>
+                      <img src="/images/동부화재다이렉트.jpg" alt="">
+                    </dd>
+                    
+                    <dt>롯데 충전형 복지카드 시스템 구축</dt>
+                    <dd>롯데카드의 충전식 선불 복지카드 전용 홈페이지 구축</dd>
+                    <dd>역할 : 메인,상세 등 전반적인 페이지 작업</dd>
+                    <dd><span class="bold">Client</span> : 롯데카드 / Launching	2019<br>
+                      URL : <a href="https://ccpc.lottecard.co.kr" target="_blank">https://ccpc.lottecard.co.kr</a>
+                        <img src="/images/롯데_충전형복지카드_01_Divice_pc.jpg" alt="">
+                    </dd>
+                    
+                    <dt>포스코 SteelTrade 철강 e-MarketPlace 구축</dt>
+                    <dd>포스코 주문 외 제품의 온라인 판매와 철강 비즈니스의 상생의 생태계를 위한 철강 오픈마켓 서비스 구축</dd>
+                    <dd>역할 : ADMIN 페이지, 제품 상세 페이지, 메인페이지 작업 지원</dd>
+                    <dd><span class="bold">Client</span> : 포스코 인터내셔널 / Launching	2019<br>
+                      URL	: <a href="https://www.steeltrade.co.kr" target="_blank">www.steeltrade.co.kr</a>
+                      <img src="/images/포스코_e-Market_place_01_Divice_pcMo-1.jpg" alt="">
                     </dd>
                   </dl>
 
@@ -134,7 +149,11 @@
 
 <script>
 export default {
-
+  mounted() {
+    if (process.env.VUE_APP_WHERE === 'COMPANY') {
+        this.$refs.container.classList.add('company');
+      }
+  },
 }
 </script>
 

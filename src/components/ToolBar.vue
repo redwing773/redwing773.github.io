@@ -3,8 +3,10 @@
     <router-link to="/news">News</router-link>
     <router-link to="/ask">Ask</router-link>
     <router-link to="/jobs">Jobs</router-link>
-    <!-- <router-link to="/item">item</router-link>
-    <router-link to="/user">user</router-link> -->
+    <!-- <router-link to="/item">item</router-link> -->
+    <!-- <router-link to="/user">user</router-link> -->
+    <router-link to="/chart">Chart</router-link>
+    <router-link to="/">PortfolioView</router-link>
   </div>
 </template>
 
