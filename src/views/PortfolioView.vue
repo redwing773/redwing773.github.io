@@ -33,17 +33,11 @@
 
           <!-- 포트폴리오 : 시작 -->
           <article id="" class="article article-type-post" itemscope="" itemprop="blogPost">
-            <div class="article-meta">
-              <a href="#" class="article-date">
-                <time>2020-12-31</time>
-              </a>
-            </div>
             <div class="article-inner">
               <header class="article-header">
                 <h1 itemprop="name" class="article-title">
-                  작업 중.. Vue.JS 프레임워크로 된 사이트로 수정 예정
+                  Vue.JS 적용된 <router-link :key="$route.fullPath" :to="`/news`">News API페이지로 이동</router-link>
                 </h1>
-                <router-link :key="$route.fullPath" :to="`/news`">News API페이지로 이동</router-link>
               </header>
               <div class="article-entry popol" itemprop="articleBody">
                 <!-- <a style="display:block;margin:20px 0;text-align:right;" href="" target="_blank">이력서 다운로드</a> -->
@@ -60,7 +54,7 @@
                   </h1>
                   <dl>
                     <dt>이투스의 주요 사업부 공통 홍보페이지 구축</dt>
-                    <dd><a href="https://github.com/redwing773/CommonPage/tree/main/html/portalPage">관련 GIT</a></dd>
+                    <dd><a href="https://github.com/redwing773/CommonPage/tree/main/">관련 GIT</a></dd>
 
                     <dt>이투스 전 서비스 공통GNB</dt>
                     <dd><img alt="">추가예정</dd>
