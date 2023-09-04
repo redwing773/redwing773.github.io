@@ -6,7 +6,7 @@
     <!-- <router-link to="/item">item</router-link> -->
     <!-- <router-link to="/user">user</router-link> -->
     <router-link to="/chart">Chart</router-link>
-    <router-link to="/">PortfolioView</router-link>
+    <router-link to="/portfolio">PortfolioView</router-link>
   </div>
 </template>
 

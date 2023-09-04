@@ -21,6 +21,12 @@ export const router = new VueRouter({
         {
             path: '/',
             name: 'portfolio',
+            redirect: '/portfolio',
+            component: PortfolioView,
+        },
+        {
+            path: '/portfolio',
+            name: 'portfolio',
             // redirect: '/news',
             component: PortfolioView,
         },
