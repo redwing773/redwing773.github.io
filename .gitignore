@@ -25,3 +25,5 @@ pnpm-debug.log*
 
 # scss map
 *.css.map
+
+*.js.map
