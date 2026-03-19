@@ -53,15 +53,11 @@
                     <!-- 포트폴리오 -->
                   </h1>
                   <dl>
-                    <dt>이투스의 주요 사업부 공통 홍보페이지 구축</dt>
-                    <dd><a href="https://github.com/redwing773/CommonPage/tree/main/">관련 GIT</a></dd>
-
-                    <dt>이투스 전 서비스 공통GNB</dt>
-                    <dd><img alt="">추가예정</dd>
-                    
                     <dt>이투스 오프라인 학원사이트 운영</dt>
                     <dd>이투스의 오프라인 학원 브랜드의 전체 홈페이지 유지보수</dd>
                     <dd>역할 : 청솔학원, 강남하이퍼학원, 앤써, 이투스네오, ECI247 학원, 내부 시스템 등 모든 페이지 관리</dd>
+                    <dd>gsap를 통한 모션, swiper 등 많은 프로모션 페이지 작업 경험</dd>
+                    <dd>최근 프로모션 작업 : <a href="https://cheongsol.etoos.com/gate/recruit/seasonOne" target="_blank">https://cheongsol.etoos.com/gate/recruit/seasonOne</a></dd>
                     <dd>청솔학원 URL : <a href="https://cheongsol.etoos.com/" target="_blank">https://cheongsol.etoos.com/</a></dd>
                     <dd>청솔학원 지점 중 1 URL : <a href="https://cheongsol-gangbuk.etoos.com/" target="_blank">https://cheongsol-gangbuk.etoos.com/</a></dd>
                     <dd>강남하이퍼학원 URL : <a href="https://hyperacademy.etoos.com/" target="_blank">https://hyperacademy.etoos.com/</a></dd>
@@ -69,6 +65,12 @@
                     <dd>ECI247 학원 URL : <a href="https://247.etoos.com/" target="_blank">https://247.etoos.com/</a></dd>
                     <dd>이투스네오 학원 : <a href="" target="_blank">현재 청솔학원으로 흡수</a></dd>
                     <dd>앤써 : <a href="" target="_blank">현재 청솔학원으로 흡수</a></dd>
+
+                    <dt>이투스의 주요 사업부 공통 홍보페이지 구축</dt>
+                    <dd><a href="https://github.com/redwing773/CommonPage/tree/main/">관련 GIT</a></dd>
+
+                    <dt>이투스 전 서비스 공통GNB - 전사 공통 글로벌 GNB 제작</dt>
+                    <dd>현재 서비스 종료</dd>
 
                     <dt>DB손해보험 시스템 운영</dt>
                     <dd>DB손해보험의 전체 웹페이지 유지보수</dd>

@@ -34,6 +34,3 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-
-### static 배포
-> dist/index.html의 링크된 src들을 "/"에서 "./"로 바꿔줘야 함
