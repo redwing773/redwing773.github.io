@@ -1,0 +1,462 @@
+// Portfolio Variables
+$p-primary: #42b883;
+$p-dark: #35495e;
+$p-light: #f8f9fa;
+$p-text: #2c3e50;
+$p-gray: #95a5a6;
+$p-white: #ffffff;
+$p-transition: all 0.3s ease;
+
+// Portfolio Mixins
+@mixin desktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+// Portfolio Base
+html {
+  scroll-behavior: smooth;
+}
+
+.portfolio {
+  color: $p-text;
+  background-color: $p-white;
+  line-height: 1.6;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  overflow-x: hidden;
+  padding-top: 70px; // Header space
+
+  .inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+// Header
+.p-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: rgba($p-white, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid rgba($p-dark, 0.05);
+
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .p-logo {
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: $p-dark;
+    margin: 0;
+  }
+
+  .p-nav {
+    display: flex;
+    gap: 20px;
+
+    .nav-link {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $p-text;
+      text-decoration: none;
+      transition: $p-transition;
+
+      &:hover {
+        color: $p-primary;
+      }
+    }
+  }
+}
+
+// Hero Section
+.p-hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, $p-light 0%, #eef2f3 100%);
+  text-align: center;
+  padding: 100px 0;
+
+  .hero-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    word-break: keep-all;
+
+    .line {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .highlight {
+      color: $p-primary;
+      position: relative;
+      display: inline-block;
+      padding: 0 10px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+        width: 100%;
+        height: 15px;
+        background: rgba($p-primary, 0.1);
+        z-index: -1;
+      }
+
+      .name {
+        color: $p-dark;
+        font-weight: 900;
+      }
+    }
+
+    @include tablet {
+      font-size: 3.8rem;
+    }
+  }
+
+  .hero-desc {
+    font-size: 1.2rem;
+    color: $p-gray;
+    margin-bottom: 50px;
+    font-weight: 500;
+
+    @include tablet {
+      font-size: 1.4rem;
+    }
+  }
+
+  .hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+
+    .btn {
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: $p-transition;
+
+      &-primary {
+        background: $p-primary;
+        color: $p-white;
+
+        &:hover {
+          background: darken($p-primary, 10%);
+          transform: translateY(-3px);
+          box-shadow: 0 10px 20px rgba($p-primary, 0.3);
+        }
+      }
+
+      &-outline {
+        border: 2px solid $p-primary;
+        color: $p-primary;
+
+        &:hover {
+          background: $p-primary;
+          color: $p-white;
+        }
+      }
+    }
+  }
+}
+
+// Sections
+.p-section {
+  padding: 100px 0;
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40px;
+      height: 4px;
+      background: $p-primary;
+    }
+  }
+}
+
+// Skills
+.p-skills {
+  background: $p-white;
+
+  .skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+    .skill-icon {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $p-light;
+      border-radius: 20px;
+      padding: 15px;
+      transition: $p-transition;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        filter: grayscale(100%);
+        opacity: 0.7;
+        transition: $p-transition;
+      }
+    }
+
+    &:hover {
+      .skill-icon {
+        transform: translateY(-10px);
+        background: $p-white;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+
+        img {
+          filter: grayscale(0%);
+          opacity: 1;
+        }
+      }
+
+      .skill-name {
+        color: $p-primary;
+      }
+    }
+
+    .skill-name {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: $p-gray;
+      transition: $p-transition;
+    }
+  }
+}
+
+// Projects
+.p-work {
+  background: $p-light;
+
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .work-card {
+    background: $p-white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: $p-transition;
+
+    &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+
+      .work-img img {
+        transform: scale(1.05);
+      }
+    }
+
+    .work-img {
+      height: 200px;
+      overflow: hidden;
+      background: $p-dark;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        transition: $p-transition;
+      }
+
+      .img-placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        color: rgba($p-white, 0.3);
+        font-weight: 800;
+        padding: 20px;
+        text-align: center;
+      }
+    }
+
+    .work-info {
+      padding: 30px;
+
+      .work-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        color: $p-dark;
+      }
+
+      .work-desc {
+        font-size: 0.95rem;
+        color: $p-gray;
+        margin-bottom: 20px;
+        height: 4.8em;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+
+      .work-details {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 20px;
+        font-size: 0.85rem;
+        border-top: 1px solid rgba($p-dark, 0.05);
+        padding-top: 15px;
+
+        li {
+          margin-bottom: 5px;
+          color: $p-text;
+
+          strong {
+            color: $p-primary;
+            margin-right: 5px;
+          }
+        }
+      }
+
+      .work-links {
+        display: flex;
+        gap: 15px;
+
+        .work-link {
+          font-size: 0.85rem;
+          font-weight: 700;
+          color: $p-dark;
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          &:hover {
+            color: $p-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Contact
+.p-contact {
+  background: $p-white;
+  text-align: center;
+
+  .contact-content {
+    p {
+      font-size: 1.2rem;
+      color: $p-dark;
+      margin-bottom: 40px;
+    }
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .contact-item {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: $p-text;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 30px;
+      background: $p-light;
+      border-radius: 50px;
+      transition: $p-transition;
+
+      .icon {
+        font-size: 1.5rem;
+      }
+
+      &:hover {
+        background: $p-primary;
+        color: $p-white;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba($p-primary, 0.2);
+      }
+    }
+  }
+}
+
+// Footer
+.p-footer {
+  padding: 50px 0;
+  background: $p-dark;
+  color: rgba($p-white, 0.6);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+// Global Nav handling
+body:has(.portfolio) {
+  .header {
+    // Hide HN header when on portfolio
+    display: none;
+  }
+}
