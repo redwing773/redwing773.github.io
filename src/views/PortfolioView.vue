@@ -107,53 +107,64 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 
+const publicPath = process.env.BASE_URL;
+
 const skills = [
-  { name: 'HTML5', icon: '/images/html5.png' },
-  { name: 'CSS3', icon: '/images/css3.png' },
-  { name: 'JavaScript', icon: '/images/js.png' },
-  { name: 'Vue.js', icon: '/images/vue.png' },
+  { name: 'HTML5', icon: `${publicPath}images/html5.png` },
+  { name: 'CSS3', icon: `${publicPath}images/css3.png` },
+  { name: 'JavaScript', icon: `${publicPath}images/js.png` },
+  { name: 'Vue', icon: `${publicPath}images/vue.png` },
+  { name: 'React', icon: `${publicPath}images/react.png` },
 ];
 
 const projects = [
   {
-    title: '이투스 오프라인 학원 사이트 운영',
-    description: '청솔학원, 강남하이퍼학원 등 이투스 오프라인 브랜드 사이트 전체 유지보수 및 프로모션 작업.',
-    role: '전체 페이지 관리, GSAP 기반 인터랙션 구현',
-    tech: 'HTML/SCSS, JavaScript, GSAP, Swiper',
+    title: '이투스 학원 브랜드 사이트 운영',
+    description: '청솔학원, 강남하이퍼학원 등 이투스 오프라인 브랜드 사이트 전체 구축 및 운영, 프로모션 작업.',
+    role: '구축, 운영, 전체 페이지 관리, 프로모션 페이지 제작',
+    tech: 'HTML/SCSS, JavaScript, NUXT3, GSAP, Swiper',
     url: 'https://cheongsol.etoos.com/',
-    image: '', 
+    image: `${publicPath}images/etoos-cheongsol.webp`,
+  },
+  {
+    title: '이투스 학원 백오피스 사이트 운영',
+    description: '청솔학원, 강남하이퍼학원 등 이투스 오프라인 브랜드 사이트 전체 백오피스 구축 및 운영작업.',
+    role: '전체 페이지 관리, GSAP 기반 인터랙션 구현',
+    tech: 'HTML/SCSS, JavaScript, VUE3, Swiper, ChartJS',
+    url: 'https://inside.etoos.com//',
+    image: `${publicPath}images/etoos-inside.webp`,
   },
   {
     title: 'DB손해보험 시스템 운영',
     description: '대고객 대표 홈페이지 및 다이렉트 홈페이지, 내부 시스템 등 DB손해보험 전체 웹페이지 유지보수.',
     role: '퍼블리싱 및 UI/UX 개선',
-    tech: 'HTML/CSS, JavaScript, jQuery',
+    tech: 'HTML/CSS, jQuery, JavaScript',
     url: 'https://www.idbins.com',
-    image: '/images/동부화재.jpg',
+    image: `${publicPath}images/동부화재.jpg`,
   },
   {
     title: 'DB손해보험 다이렉트',
     description: '다이렉트 보험 상품 안내 및 계약 관리 시스템 퍼블리싱.',
     role: 'UI 개발 및 유지보수',
-    tech: 'HTML/CSS, JavaScript',
+    tech: 'HTML/CSS, JQuery, JavaScript',
     url: 'https://www.directdb.co.kr',
-    image: '/images/동부화재다이렉트.jpg',
+    image: `${publicPath}images/동부화재다이렉트.jpg`,
   },
   {
     title: '롯데 충전형 복지카드 시스템',
     description: '롯데카드 충전식 선불 복지카드 전용 홈페이지 구축.',
     role: '메인 및 상세 페이지 퍼블리싱',
-    tech: 'HTML/CSS, JavaScript',
+    tech: 'HTML/CSS, JQuery',
     url: 'https://ccpc.lottecard.co.kr',
-    image: '/images/롯데_충전형복지카드_01_Divice_pc.jpg',
+    image: `${publicPath}images/롯데_충전형복지카드_01_Divice_pc.webp`,
   },
   {
     title: '포스코 SteelTrade e-MarketPlace',
     description: '철강 비즈니스 상생을 위한 온라인 철강 오픈마켓 서비스 구축.',
     role: 'ADMIN 및 제품 상세 페이지 작업 지원',
-    tech: 'HTML/CSS, JavaScript',
+    tech: 'HTML/CSS, JQuery',
     url: 'https://www.steeltrade.co.kr',
-    image: '/images/포스코_e-Market_place_01_Divice_pcMo-1.jpg',
+    image: `${publicPath}images/포스코_e-Market_place_01_Divice_pcMo-1.webp`,
   }
 ];
 
