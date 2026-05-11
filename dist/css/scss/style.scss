@@ -22,13 +22,6 @@ body {
     clear: both;
 }
 
-.inner {
-    display: inline;
-    float: left;
-    width: 98.33333333333333%;
-    margin: 0 0.833333333333333%;
-}
-
 .left,
 .alignleft {
     float: left;
@@ -45,10 +38,14 @@ body {
 
 #container {
     position: relative;
-    &.company{
+
+    &.company {
+
         h1 #logo,
         .article-entry .imgbox img,
-        .list dl dd img{display: none;}
+        .list dl dd img {
+            display: none;
+        }
 
     }
 }
@@ -1514,4 +1511,6 @@ pre .javascript .function {
 
 .article-entry.popol .list dd img {
     margin-top: 5px;
-} 
+}
+
+@import '_portfolio.scss';
