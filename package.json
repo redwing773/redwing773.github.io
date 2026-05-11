@@ -9,7 +9,7 @@
   "author": "채지민",
   "scripts": {
     "serve": "sass --style=compressed --watch public/css/scss:public/css/ | vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "sass --style=compressed public/css/scss:public/css/ && vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {

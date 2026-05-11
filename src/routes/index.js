@@ -16,7 +16,7 @@ import { store } from '../store/index.js';
 Vue.use(VueRouter);
 
 export const router = new VueRouter({
-    mode: 'history',
+    mode: 'hash',
     routes: [
         {
             path: '/',
