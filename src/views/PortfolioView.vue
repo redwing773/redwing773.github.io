@@ -121,7 +121,7 @@ const projects = [
   {
     title: '이투스 학원 브랜드 사이트 운영',
     description: '청솔학원, 강남하이퍼학원 등 이투스 오프라인 브랜드 사이트 전체 구축 및 운영, 프로모션 작업.',
-    role: '구축, 운영, 전체 페이지 관리, 프로모션 페이지 제작',
+    role: '구축, 운영, 신규 페이지 추가, 페이지 관리, 프로모션 페이지 제작',
     tech: 'HTML/SCSS, JavaScript, NUXT3, GSAP, Swiper',
     url: 'https://cheongsol.etoos.com/',
     image: `${publicPath}images/etoos-cheongsol.webp`,
@@ -129,7 +129,7 @@ const projects = [
   {
     title: '이투스 학원 백오피스 사이트 운영',
     description: '청솔학원, 강남하이퍼학원 등 이투스 오프라인 브랜드 사이트 전체 백오피스 구축 및 운영작업.',
-    role: '전체 페이지 관리, GSAP 기반 인터랙션 구현',
+    role: '구축, 운영, 신규 추가 등 전체 페이지 관리',
     tech: 'HTML/SCSS, JavaScript, VUE3, Swiper, ChartJS',
     url: 'https://inside.etoos.com//',
     image: `${publicPath}images/etoos-inside.webp`,

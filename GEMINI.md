@@ -62,8 +62,3 @@
 - **Legacy 파일:** `legacy/` 디렉토리는 과거 버전의 데이터(2019~2020)를 포함하고 있으므로 수정 시 주의가 필요합니다.
 - **SCSS:** 스타일 수정 시 `public/css/scss/style.scss`를 편집하며, 빌드 시 압축된 CSS로 변환됩니다.
 - **브라우저 지원:** `browserslist` 설정에 따라 최신 2개 버전 및 점유율 1% 이상의 브라우저를 지원합니다.
-
-## 배포
-
-1. npm run build
-2. github 'main' 브랜치에 commit 하면 github에서 자동 CI/CD
